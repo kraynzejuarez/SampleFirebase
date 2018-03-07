@@ -8,17 +8,17 @@
 
 <ul *ngFor="let sample of samples | async">
   <li (click)="getPost(sample.id)">
-    <strong>{{ sample.data.Firstname}}</strong>
+    <strong>{{ sample.data.Firstname}} (<a href="#" (click)="deleteSample(sample.id)">delete</a>)</strong> 
     <br>
-    <strong>{{sample.data.Lastname}}</strong>
+    <strong>{{sample.data.Lastname}} </strong> 
     <br>
-    <strong>{{sample.data.Phone}}</strong>
+    <strong>{{sample.data.Phone}} </strong> 
     <br>
-    <strong>{{sample.data.Mobile}}</strong>
+    <strong>{{sample.data.Mobile}} </strong> 
     <br>
-    <strong>{{sample.data.Email}}</strong>
+    <strong>{{sample.data.Email}} </strong> 
     <br>
-    <strong>{{sample.data.Address}}</strong>
+    <strong>{{sample.data.Address}} </strong> 
   </li>
 </ul>
 

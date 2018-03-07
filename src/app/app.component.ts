@@ -57,5 +57,8 @@ export class AppComponent {
 	getPost(sampleId) {
     this.sampleDoc = this.afs.doc('samples/'+sampleId);
     this.samples = this.sampleDoc.valueChanges();
+	}
+	deletePost(sampleId) {
+    this.afs.doc('samples/'+sampleId).delete();
   }
 }
