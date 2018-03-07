@@ -1,0 +1,33 @@
+<input type="text" [(ngModel)]="Firstname" name="Firstname" placeholder="Firstname..">
+<textarea [(ngModel)]="Lastname" name="Lastname" placeholder="Lastname.."></textarea>
+<textarea [(ngModel)]="Phone" name="Phone" placeholder="Phone.."></textarea>
+<textarea [(ngModel)]="Mobile" name="Mobile" placeholder="Mobile.."></textarea>
+<textarea [(ngModel)]="Email" name="Email" placeholder="Email.."></textarea>
+<textarea [(ngModel)]="Address" name="Address" placeholder="Address.."></textarea>
+<input type="submit" value="Add a Post" (click)="addPost()">
+
+<ul *ngFor="let sample of samples | async">
+  <li (click)="getPost(sample.id)">
+    <strong>{{ sample.data.Firstname}}</strong>
+    <br>
+    <strong>{{sample.data.Lastname}}</strong>
+    <br>
+    <strong>{{sample.data.Phone}}</strong>
+    <br>
+    <strong>{{sample.data.Mobile}}</strong>
+    <br>
+    <strong>{{sample.data.Email}}</strong>
+    <br>
+    <strong>{{sample.data.Address}}</strong>
+  </li>
+</ul>
+
+<h1>A specific sample:</h1>
+
+<h3>{{( Sample | async)?.Firstname }}</h3>
+<p>{{ ( Sample | async)?.Lastname}}</p>
+<p>{{ ( Sample | async)?.Phone }}</p>
+<p>{{ ( Sample | async)?.Mobile }}</p>
+<p>{{ ( Sample | async)?.Email }}</p>
+<p>{{ ( Sample | async)?.Address }}</p>
+
